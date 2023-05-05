@@ -1,0 +1,121 @@
+@import 'fonts.scss';
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    width: 100%;
+    padding: 35px 0 31px 0;
+    background-color: #F4694C;
+    font-family: 'Poppins', sans-serif;
+
+    &__nav{
+        @include flexCenter();
+        
+        button{
+            width: 180px;
+            padding: 13px 0;
+            background: none;
+            border: 1px solid #ffffff00;
+            a{
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 500;
+                padding: 20px;
+            }
+            &:not(:last-child){
+                margin-right: 70px;
+            }
+            &:hover{
+                border: 1px solid #ffffff;
+                border-radius: 10px;
+            }
+        } 
+    }
+}
+
+.inf{
+    display: flex;
+    padding: 43px 0 55px 133px;
+    font-family: 'Raleway', sans-serif;
+    gap: 191px;
+    border-top: 1px solid #D8D8D8;
+    
+    &__logo{
+        &-title{
+            color: #000000;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 24px;
+            padding-bottom: 16px;
+        }
+        &-subtitle{
+            width: 297px;
+            color: #626262;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 180%;
+        }
+    }
+    &__links{
+        display: flex;
+        gap: 120px;
+        li{
+            color: #000000;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+            width: 70px;
+            &:not(:last-child){
+                padding-bottom: 24px;
+            }
+        }
+        a{  
+            
+            color: #646464;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            &:hover{
+                color: #000000;
+                font-weight: 700;
+                transition: 0.7;
+            }
+        }
+    }
+    
+}
+
+footer{
+    width: 100%;
+    background: #F4694C;
+    padding: 24px 0;
+    font-family: 'Poppins', sans-serif;
+    
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &__contact{
+            a:not(:last-child){
+                margin-right: 16px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1200px){
+    .header{
+        &__nav{
+            button{
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
